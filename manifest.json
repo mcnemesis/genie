@@ -24,5 +24,13 @@
     "background": {
         "scripts": ["js/background.js"],
         "persistent": false
-    }
+    },
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage",
+        "http://api.genius.com/",
+        "http://www.genius.it/"
+    ]
 }
