@@ -8,8 +8,12 @@ HOW TO
 - Open your Chrome browser and navigate to Settings > Extensions > (Check "Developer Mode") > "Load unpackaged extension" > navigate to where you placed the extracted Genie source files > Select that directory (genie) > You are ready to go!
 - To see how it works, just visit any page on the web, and you shall notice that the Genie icon is displayed in your browser's address bar (on the extreme right).
 - If the url you are viewing is not a page on Genius.com, and has already been annotated on Genius, the Genie icon will show as green, and clicking it will open a popup indicating how many annotations there are on that page so far. Also, clicking on the Genius icon in the popup will open a new tab from where you can read these annotations or even create new ones!
+
+![When a page on the web has been annotated on Genius](https://raw.githubusercontent.com/mcnemesis/genie/master/demo/Anotated.png)
+
 - If a page has never been annotated, then Genie icon will show as a black, and you shall have the option to create the first annotations for that page by clicking on the Genius logo that shows in the Genie popup.
 
+![When a page on the web has never been annotated on Genius before](https://raw.githubusercontent.com/mcnemesis/genie/master/demo/NotAnotated.png)
 
 BUGS
 -----
