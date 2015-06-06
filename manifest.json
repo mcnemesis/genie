@@ -1,0 +1,28 @@
+{
+    "name": "Genie",
+    "version": "0.0.1",
+    "manifest_version": 2,
+
+    "description": "Genie helps you leverage Genius, the annotation service, to get more out of the web as you surf",
+
+    "icons": {
+        "32": "images/genie_32.png",
+        "48": "images/genie_48.png",
+        "128": "images/genie_128.png",
+        "256": "images/genie_256.png"
+    },
+
+    "page_action": {
+        "default_icon": {                    
+            "32": "images/genie_32.png",
+            "48": "images/genie_48.png"
+        },
+        "default_title": "Genie!",
+        "default_popup": "popup/widget.html" 
+    },
+
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    }
+}
