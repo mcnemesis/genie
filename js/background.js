@@ -23,6 +23,10 @@ function GeniusAPI(){
             data[STORAGE_KEYS.ON_GENIUS] = true; // we might just give em nice things...
             chrome.storage.local.set(data);
             return;
+        }else{
+            var data = {};
+            data[STORAGE_KEYS.ON_GENIUS] = false; // so we clear any cached affirmations
+            chrome.storage.local.set(data);
         }
 
         var apiCall = this._buildApiCall_webpage(uri);
