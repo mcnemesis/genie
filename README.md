@@ -15,6 +15,11 @@ HOW TO
 
 ![When a page on the web has never been annotated on Genius before](https://raw.githubusercontent.com/mcnemesis/genie/master/demo/NotAnotated.png)
 
+
+- If the page you are currently viewing happens to be hosted on Genius itself (genius.com or genius.it), then currently, there's really no need to take you anywhere else. The Genius Icon will show where the genie previosly did, and clicking on the Genius logo in the popup opens the Genius.com home page in a new tab.
+
+![When you are on a Genius hosted page](https://raw.githubusercontent.com/mcnemesis/genie/master/demo/OnGenius.png)
+
 BUGS
 -----
 The [Genius API](https://docs.genius.com/) was just officially released a few hours back, and I started working on this Chrome extension a couple hours later. So, there will definitely be some bugs I might have overlooked thus far. So, should you find anything failing, please let me know via this very repository.
