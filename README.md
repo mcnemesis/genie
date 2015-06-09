@@ -24,6 +24,8 @@ HOW TO
 
 ![Enable inline annotations](https://raw.githubusercontent.com/mcnemesis/genie/master/demo/InlineAnnotation.png)
 
+To DISABLE inline annotations on the current page, simply click the Genie icon again, uncheck the "Use Genius Right Here", and the page will be reloaded without inline annotations - meaning, you can interact with it normally.
+
 BUGS
 -----
 The [Genius API](https://docs.genius.com/) was just officially released a few hours back, and I started working on this Chrome extension a couple hours later. So, there will definitely be some bugs I might have overlooked thus far. So, should you find anything failing, please let me know via this very repository.
