@@ -5,10 +5,25 @@
  * */
 function GeniusAPI(){
     this.AccessToken = 'Nu5fq30x1jNmL7acBaakn_5TP-rcgaZBTKLihfJ1T6LhZkEUT5O-I4Xjsyle_I50'; //TODO: get one...
+    this.geniusExtVersion = "0.0.13";
+
 
     this._buildApiCall_webpage = function(uri){
         return "https://api.genius.com/web_pages/lookup?access_token="+ this.AccessToken +"&raw_annotatable_url="+ encodeURIComponent(uri) + "&_=" + Date.now();
 
+    };
+
+    this.inject = function(tabId){
+        /* implementation stolen from official beta ext ;-) -- we are merely improving the craft... don't cross the same river twice! */
+        var injection_host = 'https://genius.com/';
+        var injection_url = injection_host + 'bookmarklets/injection.js?s=extension&v=' + this.geniusExtVersion;
+        var request = new XMLHttpRequest();
+        request.onload = function () {
+            var code = 'Object.defineProperty(document, "currentScript", {get: function () { return {src:"' + injection_url + '"}; }});' + this.responseText;
+            chrome.tabs.executeScript(tabId, {code: code});
+        };
+        request.open('get', injection_url);
+        request.send();
     };
 
     // check if a given uri has any referents on Genius
@@ -106,7 +121,6 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
 
         var geniusAPI = new GeniusAPI();
         geniusAPI.uri_checkHasAnnotation(url);
-
     }
 })
 /****** end EVENT-HOOKS ******/
@@ -145,10 +159,16 @@ var ANNOTATATION_STATUS = {
     OFF: 'off',
     GENIUS: 'genius'
 }
+var tabInlineAnnotationStatus = {}
 
 /****** end GLOBALS ******/
 
 /****** UTILS ******/
+function toggleInlineAnnotation(){
+    var geniusAPI = new GeniusAPI();
+    geniusAPI.inject(lastTabId);
+}
+
 function togglePageActionIcon(state){
     if(chrome.pageAction == undefined) return;
     chrome.tabs.get(lastTabId, function(tab){

@@ -20,6 +20,10 @@ HOW TO
 
 ![When you are on a Genius hosted page](https://raw.githubusercontent.com/mcnemesis/genie/master/demo/OnGenius.png)
 
+- **NOTE** that you NOW have the option to directly view and or update/create annotations on any web page you may happen to be viewing, without leaving or navigating to a new tab, by merely checking the box labelled "Use Genius Right Here" as shown below. This thus offers you the SAME functionality as what the official Genius Extension currently gives you (well, +more).
+
+![Enable inline annotations](https://raw.githubusercontent.com/mcnemesis/genie/master/demo/InlineAnnotation.png)
+
 BUGS
 -----
 The [Genius API](https://docs.genius.com/) was just officially released a few hours back, and I started working on this Chrome extension a couple hours later. So, there will definitely be some bugs I might have overlooked thus far. So, should you find anything failing, please let me know via this very repository.
